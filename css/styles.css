@@ -483,3 +483,201 @@
         transition: none !important;
     }
 }
+
+/* ============================================
+   CIBEELIZATION - CAPTURAS OFICIALES
+   ============================================ */
+
+/* Captura de gameplay en portada */
+
+.hero-visual {
+    width: 100%;
+    max-width: 540px;
+    min-width: 0;
+}
+
+.visual-frame {
+    aspect-ratio: 16 / 9;
+    background: #26122b;
+    border: 5px solid #f8b420;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.visual-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transform: none;
+}
+
+/* Pantalla de inicio en la sección del juego */
+
+.about-visual {
+    min-width: 0;
+}
+
+.photo-frame {
+    aspect-ratio: 16 / 9;
+    background: #26122b;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.photo-frame img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* Ajustes para celulares y tablets */
+
+@media (max-width: 900px) {
+    .hero-visual {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 600px) {
+    .hero-visual {
+        width: 90%;
+        max-width: 100%;
+    }
+
+    .visual-frame {
+        border-width: 3px;
+        border-radius: 10px;
+    }
+
+    .photo-frame {
+        transform: none;
+    }
+
+    .photo-note {
+        max-width: 190px;
+    }
+}
+
+
+
+/* =========================================
+   SECCIÓN DESCUBRÍ CIBEELIZATION
+   ========================================= */
+
+.about .two-col {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 70px;
+}
+
+.about-visual,
+.about-text {
+    min-width: 0;
+}
+
+.about-visual {
+    position: relative;
+    padding: 0 20px 45px 0;
+}
+
+.about .photo-frame {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 12px;
+    transform: rotate(-2deg);
+}
+
+.about .photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.about .photo-note {
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.about-text h2 {
+    font-size: clamp(2rem, 3.3vw, 3rem);
+    line-height: 1.2;
+}
+
+/* TABLETS Y CELULARES */
+
+@media (max-width: 900px) {
+    .about .two-col {
+        grid-template-columns: 1fr;
+        gap: 45px;
+    }
+
+    .about-visual {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .about .two-col {
+        gap: 35px;
+    }
+
+    .about .photo-frame {
+        transform: none;
+    }
+
+    .about-text h2 {
+        font-size: clamp(1.9rem, 7vw, 2.6rem);
+    }
+}
+
+/* Ajustes finales de la sección El juego */
+
+.about-text h2 {
+    font-size: clamp(2rem, 3vw, 2.7rem);
+    line-height: 1.2;
+}
+
+.about .photo-note {
+    position: absolute;
+    right: -15px;
+    bottom: 5px;
+
+    width: 185px;
+    max-width: none;
+
+    padding: 15px 18px;
+
+    transform: rotate(3deg);
+    z-index: 2;
+}
+
+
+.about .photo-note strong {
+    font-size: 0.82rem;
+    line-height: 1.45;
+}
+
+
+
+@media (max-width: 600px) {
+    .about .photo-note {
+        right: 0;
+        bottom: 0;
+        width: 155px;
+        max-width: none;
+        padding: 12px;
+    }
+
+    .about .photo-note strong {
+        font-size: 0.72rem;
+    }
+}
+
