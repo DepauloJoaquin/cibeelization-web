@@ -20,9 +20,10 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="stylesheet" href="./css/styles.css">
-<link rel="stylesheet" href="./css/animations.css">
-<link rel="stylesheet" href="./css/responsive.css">
+<!-- Estilos versionados para evitar caché antigua -->
+<link rel="stylesheet" href="./css/styles.css?v=4">
+<link rel="stylesheet" href="./css/animations.css?v=4">
+<link rel="stylesheet" href="./css/responsive.css?v=4">
 
 <script type="module" src="./js/main.js"></script>
 </head>
@@ -35,15 +36,19 @@
 <header class="site-header" id="top">
     <nav class="nav wrap" aria-label="Navegación principal">
 
-        <a class="brand" href="#inicio" aria-label="Cibeelization, ir al inicio">
-            <img
-                class="nav-logo"
-                src="./assets/logos/cibeelization-logo.png.webp"
-                alt=""
-                width="1764"
-                height="730"
-            >
-        </a>
+        <a class="brand" href="#inicio"
+   aria-label="Cibeelization, ir al inicio">
+
+    <img
+        class="nav-logo"
+        src="./assets/logos/cibeelization-logo.png.webp"
+        alt=""
+        width="150"
+        height="62"
+        style="display:block; width:150px; max-width:100%; height:auto; max-height:65px; object-fit:contain;"
+    >
+
+</a>
 
         <button class="nav-toggle" type="button"
             aria-label="Abrir menú"
@@ -579,7 +584,7 @@
             <a class="brand" href="#inicio" aria-label="Cibeelization, volver al inicio">
                 <img
                     class="footer-logo"
-                    src="./assets/logos/cibeelization-logo.png"
+                    src="./assets/logos/cibeelization-logo.png.webp"
                     alt=""
                     width="1764"
                     height="730"
