@@ -258,3 +258,33 @@
         padding: 4px 6px;
     }
 }
+/* Lightbox optimizado para celulares */
+
+@media (max-width: 600px) {
+    .lightbox {
+        padding: 60px 8px 25px;
+        gap: 4px;
+    }
+
+    .lightbox figure {
+        max-width: calc(100vw - 90px);
+        width: 100%;
+    }
+
+    .lightbox img {
+        width: 100%;
+        max-height: 75dvh;
+        object-fit: contain;
+    }
+
+    .lightbox button {
+        width: 34px;
+        height: 34px;
+        font-size: 1.5rem;
+    }
+
+    .lightbox .lightbox-close {
+        top: 15px;
+        right: 15px;
+    }
+}
