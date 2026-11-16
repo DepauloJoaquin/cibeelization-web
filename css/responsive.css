@@ -198,3 +198,63 @@
         font-size: 0.6rem;
     }
 }
+
+
+/* ============================================
+   RESPONSIVE — ARTE CONCEPTUAL
+   ============================================ */
+
+@media (max-width: 900px) {
+    .concept-grid {
+        gap: 18px;
+    }
+
+    .concept-comparison {
+        gap: 8px;
+        padding: 12px;
+    }
+
+    .concept-artwork {
+        height: 245px;
+    }
+}
+
+@media (max-width: 700px) {
+    .concept-grid {
+        grid-template-columns: 1fr;
+        max-width: 510px;
+        gap: 24px;
+    }
+
+    .concept-artwork {
+        height: 290px;
+    }
+
+    .concept-extras {
+        margin-top: 60px;
+    }
+
+    .concept-extras-grid {
+        grid-template-columns: 1fr;
+        max-width: 510px;
+    }
+}
+
+@media (max-width: 380px) {
+    .concept-card-header {
+        padding: 20px;
+    }
+
+    .concept-card-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .concept-artwork {
+        height: 230px;
+    }
+
+    .concept-tag {
+        font-size: 0.5rem;
+        padding: 4px 6px;
+    }
+}

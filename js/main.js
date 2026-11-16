@@ -1,6 +1,6 @@
 import { siteConfig } from './config.js';
 import { initNavigation } from './navigation.js';
-import { initGallery } from './gallery.js';
+import { initGallery,initConceptArtLightbox } from './gallery.js';
 import { initNews } from './news.js';
 
 function safeExternalUrl(raw) {
@@ -66,5 +66,5 @@ function initAnimations(){
   const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-visible');observer.unobserve(entry.target);}}),{threshold:.09,rootMargin:'0px 0px 50px 0px'});
   elements.forEach(el=>observer.observe(el));
 }
-initNavigation();initGallery();initNews();initSocials();initTeam();initContact();initAnimations();
+initNavigation();initGallery();initNews();initSocials();initTeam();initContact();initAnimations();initConceptArtLightbox();
 document.querySelector('#year').textContent=new Date().getFullYear();
