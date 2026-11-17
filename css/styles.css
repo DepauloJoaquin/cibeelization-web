@@ -929,3 +929,530 @@ body {
         min-width: 0;
     }
 }
+
+
+/* ============================================
+   CIBEELIZATION — ZÁNGANO BASE
+   ============================================ */
+
+.drone-section {
+    background: linear-gradient(155deg, #29142e, #180d1c);
+    overflow: hidden;
+}
+
+.drone-section .section-heading {
+    max-width: 740px;
+    margin: 0 auto 60px;
+}
+
+.drone-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 1px solid rgba(255, 201, 40, 0.25);
+    border-radius: 18px;
+    background: linear-gradient(145deg, #3b203e, #241228);
+    box-shadow: var(--shadow);
+}
+
+/* Visor */
+
+.drone-visual {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    background: radial-gradient(
+        ellipse at center,
+        #4c2943 0%,
+        #27142e 75%
+    );
+}
+
+.drone-visual-label {
+    color: var(--honey);
+    font-size: 0.65rem;
+    font-weight: 800;
+    letter-spacing: 0.15em;
+}
+
+.drone-stage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    min-height: 440px;
+    overflow: hidden;
+}
+
+.drone-aura {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    background: radial-gradient(
+        circle,
+        rgba(255, 201, 40, 0.22),
+        rgba(243, 107, 22, 0.07) 55%,
+        transparent 75%
+    );
+    filter: blur(20px);
+    pointer-events: none;
+}
+
+.drone-orbit {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border: 1px solid rgba(255, 201, 40, 0.19);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.drone-orbit::after {
+    content: "✦";
+    position: absolute;
+    top: 20px;
+    right: 38px;
+    color: var(--honey);
+}
+
+.drone-image {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 380px;
+    height: 400px;
+    object-fit: contain;
+    filter: drop-shadow(0 22px 25px rgba(0, 0, 0, 0.3));
+    transition: opacity 0.2s ease;
+}
+
+.drone-image.is-changing {
+    opacity: 0.35;
+}
+
+/* Selector */
+
+.drone-view-selector {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.drone-view-btn {
+    padding: 11px 17px;
+    border: 1px solid rgba(255, 201, 40, 0.3);
+    border-radius: 7px;
+    background: #26152b;
+    color: var(--cream);
+    font-size: 0.78rem;
+    font-weight: 700;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.drone-view-btn:hover {
+    border-color: var(--honey);
+}
+
+.drone-view-btn.active {
+    background: var(--honey);
+    border-color: var(--honey);
+    color: #29142d;
+}
+
+/* Información */
+
+.drone-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 55px 45px;
+}
+
+.drone-category {
+    color: var(--honey);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.17em;
+}
+
+.drone-info h3 {
+    margin: 20px 0 10px;
+    font-family: 'Cinzel Decorative', Georgia, serif;
+    font-size: clamp(2rem, 3.3vw, 3.2rem);
+    color: var(--cream);
+}
+
+.drone-role {
+    margin-bottom: 28px;
+    color: var(--orange);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.drone-info p {
+    font-size: 0.94rem;
+    line-height: 1.85;
+}
+
+
+
+.drone-evolution-note {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    margin-top: 25px;
+}
+
+.drone-evolution-note > span {
+    color: var(--honey);
+}
+
+.drone-evolution-note p {
+    margin: 0;
+    font-size: 0.83rem;
+}
+
+.drone-section-footer {
+    margin-top: 48px;
+    text-align: center;
+}
+
+.drone-section-footer > span {
+    color: var(--honey);
+    font-size: 1.7rem;
+}
+
+.drone-section-footer p {
+    margin: 10px 0 4px;
+    color: var(--honey);
+    font-size: 0.7rem;
+    font-weight: 800;
+    letter-spacing: 0.17em;
+}
+
+.drone-section-footer small {
+    color: var(--muted);
+    font-size: 0.75rem;
+}
+
+
+/* ============================================
+   ESTADÍSTICAS COMPARTIDAS
+   ZÁNGANO Y EVOLUCIONES
+   ============================================ */
+
+.drone-stats,
+.evolution-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    margin-top: 22px;
+}
+
+.drone-stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    min-width: 0;
+    min-height: 110px;
+    padding: 20px 22px;
+
+    background: linear-gradient(
+        145deg,
+        rgba(255, 201, 40, 0.065),
+        rgba(255, 201, 40, 0.015)
+    );
+
+    border: 1px solid rgba(255, 201, 40, 0.12);
+    border-radius: 18px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        background 0.25s ease;
+}
+
+.drone-stat:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 201, 40, 0.4);
+    background: rgba(255, 201, 40, 0.08);
+}
+
+/* Encabezado e íconos */
+
+.drone-stat-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.drone-stat-header i {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 34px;
+    height: 34px;
+    flex-shrink: 0;
+
+    border-radius: 50%;
+    background: rgba(255, 201, 40, 0.1);
+
+    color: var(--honey);
+    font-size: 17px;
+}
+
+.drone-stat-header span {
+    color: var(--muted);
+    margin: 0;
+
+    font-size: 0.64rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    line-height: 1.4;
+}
+
+/* Valores */
+
+.drone-stat strong {
+    display: block;
+    color: var(--honey);
+    font-size: 1.4rem;
+    line-height: 1.25;
+}
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+    .drone-stat {
+        transition: none;
+    }
+}
+
+
+
+/* ============================================
+   EVOLUCIONES DEL ZÁNGANO
+   ============================================ */
+
+.evolution-section {
+    margin-top: 85px;
+}
+
+.evolution-heading {
+    max-width: 760px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.evolution-heading p {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Selección de unidad */
+
+.evolution-selector {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+    max-width: 1100px;
+    margin: 0 auto 25px;
+}
+
+.evolution-choice {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+
+    min-width: 0;
+    min-height: 105px;
+    padding: 18px 12px;
+
+    color: var(--cream);
+    background: linear-gradient(145deg, #39203d, #251329);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+
+    font-weight: 700;
+    font-size: 0.85rem;
+
+    transition: border-color .2s, background .2s, transform .2s;
+}
+
+.evolution-choice i {
+    color: var(--honey);
+    font-size: 1.6rem;
+}
+
+.evolution-choice:hover {
+    transform: translateY(-3px);
+    border-color: rgba(255, 201, 40, .6);
+}
+
+.evolution-choice.active {
+    border-color: var(--honey);
+    background: linear-gradient(145deg, #50313d, #35203b);
+    box-shadow: inset 0 0 25px rgba(255, 201, 40, .05);
+}
+
+/* Ficha principal */
+
+.evolution-showcase {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+
+    overflow: hidden;
+    border: 1px solid rgba(255, 201, 40, .25);
+    border-radius: 18px;
+
+    background: linear-gradient(145deg, #3b203e, #241228);
+    box-shadow: var(--shadow);
+}
+
+.evolution-visual {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 25px;
+
+    background: radial-gradient(
+        ellipse at center,
+        #4c2943,
+        #27142e 75%
+    );
+}
+
+.evolution-stage {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 450px;
+    flex: 1;
+    overflow: hidden;
+}
+
+.evolution-stage img {
+    position: relative;
+    z-index: 1;
+
+    display: block;
+    width: 100%;
+    max-width: 410px;
+    height: 430px;
+    object-fit: contain;
+
+    filter: drop-shadow(0 22px 25px rgba(0, 0, 0, .3));
+}
+
+.evolution-views {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 12px;
+}
+
+.evolution-view-btn {
+    padding: 11px 17px;
+    border: 1px solid rgba(255, 201, 40, .3);
+    border-radius: 7px;
+    background: #26152b;
+    color: var(--cream);
+    font-size: .78rem;
+    font-weight: 700;
+}
+
+.evolution-view-btn.active {
+    background: var(--honey);
+    border-color: var(--honey);
+    color: #29142d;
+}
+
+.evolution-info {
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 45px 38px;
+}
+
+.evolution-info h3 {
+    margin: 20px 0 10px;
+    font-family: 'Cinzel Decorative', Georgia, serif;
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    color: var(--cream);
+}
+
+.evolution-info > p {
+    margin-top: 15px;
+    line-height: 1.85;
+}
+
+.evolution-stats {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 20px;
+}
+
+.evolution-stats .drone-stat {
+    padding: 16px;
+}
+
+.evolution-stats .drone-stat strong {
+    font-size: clamp(.82rem, 1.2vw, 1.2rem);
+    overflow-wrap: anywhere;
+}
+
+/* Habilidad especial */
+
+.evolution-ability {
+    margin-top: 25px;
+    padding: 20px;
+    border-left: 3px solid var(--honey);
+    border-radius: 0 10px 10px 0;
+    background: rgba(255, 201, 40, .055);
+}
+
+.evolution-ability-label {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-bottom: 10px;
+    color: var(--honey);
+    font-size: .7rem;
+    font-weight: 800;
+    letter-spacing: .08em;
+}
+
+.evolution-ability p {
+    margin: 0;
+    font-size: .86rem;
+    line-height: 1.7;
+}
+
+/* Accesibilidad */
+
+@media (prefers-reduced-motion: reduce) {
+    .evolution-choice {
+        transition: none;
+    }
+}

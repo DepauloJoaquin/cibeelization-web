@@ -20,12 +20,19 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
+<link
+    rel="stylesheet"
+    href="https://unpkg.com/lucide-static@0.468.0/font/lucide.css"
+>
+
 <!-- Estilos versionados para evitar caché antigua -->
 <link rel="stylesheet" href="./css/styles.css?v=4">
 <link rel="stylesheet" href="./css/animations.css?v=4">
 <link rel="stylesheet" href="./css/responsive.css?v=4">
 
+
 <script type="module" src="./js/main.js"></script>
+<script type="module" src="./js/zangano.js"></script>
 </head>
 
 <body>
@@ -460,6 +467,353 @@
             </a>
         </div>
     </div>
+</section>
+
+
+
+
+
+<!-- ZÁNGANO BASE -->
+<section class="section drone-section" id="zangano">
+
+    <div class="wrap">
+
+        <div class="section-heading centered reveal">
+            <span class="section-label">
+                UNIDADES / LA COLMENA
+            </span>
+
+            <h2>
+                El origen de cada
+                <span class="gold-text">evolución.</span>
+            </h2>
+
+            <p>
+                Toda gran colmena comienza con sus unidades.
+                Conocé al zángano, el punto de partida de
+                cuatro caminos de evolución.
+            </p>
+        </div>
+
+        <article class="drone-showcase reveal">
+
+            <!-- VISOR DE PERSONAJE -->
+            <div class="drone-visual">
+
+                <span class="drone-visual-label">
+                    MODELO DEL PERSONAJE / 00
+                </span>
+
+                <div class="drone-stage">
+
+                    <div class="drone-aura"
+                         aria-hidden="true"></div>
+
+                    <div class="drone-orbit"
+                         aria-hidden="true"></div>
+
+                    <img
+                        id="drone-image"
+                        class="drone-image"
+                        src="./assets/models/ZanganoPose3Transparente.webp"
+                        alt="Zángano base de Cibeelization en pose dinámica"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                </div>
+
+                <!-- SELECTOR DE POSES -->
+                <div class="drone-view-selector"
+                     role="group"
+                     aria-label="Seleccionar vista del zángano">
+
+                    <button
+                        class="drone-view-btn active"
+                        type="button"
+                        data-drone-view="dynamic"
+                        aria-pressed="true">
+                        Pose dinámica
+                    </button>
+
+                    <button
+                        class="drone-view-btn"
+                        type="button"
+                        data-drone-view="front"
+                        aria-pressed="false">
+                        Vista frontal
+                    </button>
+
+                </div>
+
+            </div>
+
+            <!-- INFORMACIÓN DEL ZÁNGANO -->
+            <div class="drone-info">
+
+                <span class="drone-category">
+                    UNIDAD BASE · 00
+                </span>
+
+                <h3>El Zángano</h3>
+
+                <span class="drone-role">
+                    EL INICIO DE TODA EVOLUCIÓN
+                </span>
+
+                <p>
+                    El zángano es la unidad básica de la colmena.
+                    No tiene costo de invocación y genera
+                <strong>1 unidad de agua por turno</strong>.
+                </p>
+
+                <p>
+                    Es la única abeja capaz de transformarse,
+                    pudiendo evolucionar en cuatro tipos de
+                    unidades con habilidades diferentes.
+                </p>
+
+                
+                <!-- ESTADÍSTICAS DEL ZÁNGANO -->
+                <div class="drone-stats">
+
+                    <div class="drone-stat">
+                        <div class="drone-stat-header">
+                            <i class="icon icon-heart" aria-hidden="true"></i>
+                            <span>VIDA</span>
+                        </div>
+                        <strong>1 HP</strong>
+                    </div>
+
+                    <div class="drone-stat">
+                        <div class="drone-stat-header">
+                            <i class="icon icon-swords" aria-hidden="true"></i>
+                            <span>ATAQUE</span>
+                        </div>
+                        <strong>1 ATK</strong>
+                    </div>
+
+                    <div class="drone-stat">
+                        <div class="drone-stat-header">
+                            <i class="icon icon-droplets" aria-hidden="true"></i>
+                            <span>AGUA POR TURNO</span>
+                        </div>
+                        <strong>+1</strong>
+                    </div>
+
+                    <div class="drone-stat">
+                        <div class="drone-stat-header">
+                            <i class="icon icon-coins" aria-hidden="true"></i>
+                            <span>COSTO DE INVOCACIÓN</span>
+                        </div>
+                        <strong>0</strong>
+                    </div>
+
+                </div>
+
+
+
+                <div class="drone-evolution-note">
+                    <span aria-hidden="true">✦</span>
+                    <p>
+                        Cada transformación abre nuevas
+                        posibilidades estratégicas para tu colmena.
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+       
+    <!-- EVOLUCIONES DEL ZÁNGANO -->
+    <section class="evolution-section" id="evoluciones">
+
+        <div class="evolution-heading reveal">
+            <span class="section-label">
+                UNIDADES / ESPECIALIZACIONES
+            </span>
+
+            <h2>
+                Cuatro caminos de
+                <span class="gold-text">evolución.</span>
+            </h2>
+
+            <p>
+                El zángano puede transformarse en cuatro tipos
+                de abejas. Cada una ofrece habilidades únicas
+                para desarrollar tu estrategia.
+            </p>
+        </div>
+
+        <!-- SELECTOR DE EVOLUCIONES -->
+        <div class="evolution-selector"
+            role="group"
+            aria-label="Seleccionar evolución del zángano">
+
+            <button class="evolution-choice active"
+                    type="button"
+                    data-evolution="obrera"
+                    aria-pressed="true">
+                <i class="icon icon-pickaxe" aria-hidden="true"></i>
+                <span>Obrera</span>
+            </button>
+
+            <button class="evolution-choice"
+                    type="button"
+                    data-evolution="polinizadora"
+                    aria-pressed="false">
+                <i class="icon icon-flower-2" aria-hidden="true"></i>
+                <span>Polinizadora</span>
+            </button>
+
+            <button class="evolution-choice"
+                    type="button"
+                    data-evolution="constructora"
+                    aria-pressed="false">
+                <i class="icon icon-brick-wall" aria-hidden="true"></i>
+                <span>Constructora</span>
+            </button>
+
+            <button class="evolution-choice"
+                    type="button"
+                    data-evolution="guardiana"
+                    aria-pressed="false">
+                <i class="icon icon-shield" aria-hidden="true"></i>
+                <span>Guardiana</span>
+            </button>
+
+        </div>
+
+        <!-- FICHA DE EVOLUCIÓN -->
+        <article class="evolution-showcase">
+
+            <div class="evolution-visual">
+
+                <span class="drone-visual-label"
+                    id="evolution-number">
+                    EVOLUCIÓN 01 / 04
+                </span>
+
+                <div class="evolution-stage">
+                    <div class="drone-aura"
+                        aria-hidden="true"></div>
+
+                    <div class="drone-orbit"
+                        aria-hidden="true"></div>
+
+                    <img
+                        id="evolution-image"
+                        src="./assets/models/evoluciones/AbejaObreraPose1Transparente.webp"
+                        alt="Abeja Obrera en pose dinámica"
+                        loading="lazy"
+                        decoding="async"
+                    >
+                </div>
+
+                <div class="evolution-views"
+                    role="group"
+                    aria-label="Seleccionar vista de la evolución">
+
+                    <button class="evolution-view-btn active"
+                            type="button"
+                            data-evolution-view="dynamic"
+                            aria-pressed="true">
+                        Pose dinámica
+                    </button>
+
+                    <button class="evolution-view-btn"
+                            type="button"
+                            data-evolution-view="front"
+                            aria-pressed="false">
+                        Vista frontal
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="evolution-info"
+                aria-live="polite"
+                aria-atomic="true">
+
+                <span class="drone-category" id="evolution-category">
+                    EVOLUCIÓN 01 · UNIDAD ESPECIALIZADA
+                </span>
+
+                <h3 id="evolution-name">Abeja Obrera</h3>
+
+                <span class="drone-role" id="evolution-role">
+                    LA FUERZA DEL TRABAJO
+                </span>
+
+                <p id="evolution-description">
+                    La abeja obrera produce propóleo y puede
+                    destruir las barreras creadas por las
+                    constructoras de reinas enemigas.
+                </p>
+
+                <div class="evolution-stats">
+
+                    <div class="drone-stat">
+                        <div class="drone-stat-header">
+                            <i class="icon icon-heart" aria-hidden="true"></i>
+                            <span>VIDA</span>
+                        </div>
+                        <strong id="evolution-hp">5 HP</strong>
+                    </div>
+
+                    <div class="drone-stat">
+                        <div class="drone-stat-header">
+                            <i class="icon icon-swords" aria-hidden="true"></i>
+                            <span>ATAQUE</span>
+                        </div>
+                        <strong id="evolution-atk">2 ATK</strong>
+                    </div>
+
+                    <div class="drone-stat">
+                        <div class="drone-stat-header">
+                            <i class="icon icon-droplets" aria-hidden="true"></i>
+                            <span>PRODUCCIÓN</span>
+                        </div>
+                        <strong id="evolution-production">
+                            +1 propóleo/turno
+                        </strong>
+                    </div>
+
+                    <div class="drone-stat">
+                        <div class="drone-stat-header">
+                            <i class="icon icon-coins" aria-hidden="true"></i>
+                            <span>COSTO DE EVOLUCIÓN</span>
+                        </div>
+                        <strong id="evolution-cost">
+                            2 agua + 1 zángano
+                        </strong>
+                    </div>
+
+                </div>
+
+                <div class="evolution-ability">
+                    <span class="evolution-ability-label">
+                        <i class="icon icon-sparkles"
+                        aria-hidden="true"></i>
+                        HABILIDAD ESPECIAL
+                    </span>
+
+                    <p id="evolution-ability-text">
+                        Es la única abeja capaz de destruir las
+                        barreras de las constructoras enemigas.
+                    </p>
+                </div>
+
+            </div>
+
+        </article>
+
+    </section>
+
+
+    </div>
+
 </section>
 
 

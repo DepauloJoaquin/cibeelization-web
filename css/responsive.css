@@ -288,3 +288,146 @@
         right: 15px;
     }
 }
+
+
+
+/* ============================================
+   RESPONSIVE — ZÁNGANO
+   ============================================ */
+
+@media (max-width: 900px) {
+    .drone-showcase {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .drone-info {
+        padding: 35px;
+    }
+
+    .drone-stage {
+        min-height: 360px;
+    }
+}
+
+@media (max-width: 600px) {
+    .drone-section .section-heading {
+        margin-bottom: 40px;
+    }
+
+    .drone-visual {
+        padding: 20px 15px;
+    }
+
+    .drone-stage {
+        min-height: 310px;
+    }
+
+    .drone-image {
+        max-width: 270px;
+        height: 310px;
+    }
+
+    .drone-aura,
+    .drone-orbit {
+        width: 250px;
+        height: 250px;
+    }
+
+    .drone-info {
+        padding: 30px 24px;
+    }
+
+    .drone-info h3 {
+        font-size: 2rem;
+    }
+
+    .drone-view-btn {
+        padding: 10px 13px;
+        font-size: 0.72rem;
+    }
+
+    .drone-details {
+        gap: 10px;
+    }
+
+    .drone-details strong {
+        font-size: 0.78rem;
+    }
+}
+
+
+/* ============================================
+   RESPONSIVE — EVOLUCIONES
+   ============================================ */
+
+@media (max-width: 900px) {
+    .evolution-showcase {
+        grid-template-columns: 1fr;
+        max-width: 600px;
+    }
+
+    .evolution-stage {
+        min-height: 350px;
+    }
+
+    .evolution-info {
+        padding: 35px;
+    }
+}
+
+@media (max-width: 600px) {
+    .evolution-section {
+        margin-top: 65px;
+    }
+
+    .evolution-selector {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 10px;
+    }
+
+    .evolution-choice {
+        min-height: 88px;
+        padding: 12px;
+        font-size: .78rem;
+    }
+
+    .evolution-visual {
+        padding: 20px 15px;
+    }
+
+    .evolution-stage {
+        min-height: 310px;
+    }
+
+    .evolution-stage img {
+        height: 300px;
+        max-width: 290px;
+    }
+
+    .evolution-stage .drone-aura,
+    .evolution-stage .drone-orbit {
+        width: 260px;
+        height: 260px;
+    }
+
+    .evolution-info {
+        padding: 30px 20px;
+    }
+
+    .evolution-info h3 {
+        font-size: 1.8rem;
+    }
+
+    .evolution-stats .drone-stat {
+        padding: 12px;
+    }
+
+    .evolution-stats .drone-stat strong {
+        font-size: .9rem;
+    }
+
+    .evolution-ability {
+        padding: 15px;
+    }
+}
